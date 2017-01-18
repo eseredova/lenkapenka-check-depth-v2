@@ -2,11 +2,12 @@
   "name": "lenkapenka-check-depth-v2",
   "version": "0.0.1",
   "description": "Smth not clear yet",
-  "bin": {
-    "lcd": "lcd.js"
-  },
+  "bin": "./babel/bin/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-version": "babel --version",
+    "build": "babel src -d lib",
+    "start2": "babel-node --presets es2015 ./src/lcd2.js"
   },
   "author": "Elena Seredova",
   "license": "MIT",
@@ -14,7 +15,10 @@
     "eslint": "^3.12.2"
   },
   "dependencies": {
+    "parse5": "^3.0.1",
     "phantom": "^3.2.1",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.14",
+    "sync-request": "^4.0.1",
+    "yargs": "^6.6.0"
   }
 }
