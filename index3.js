@@ -5,9 +5,6 @@ const dom = require('html-dom-parser');
 const depth = require('./args.js').depth;
 const url = require('./args.js').url;
 
-// console.log(depth);
-// console.log(url);
-
 function getDOM(url) {
     const response = request('GET', url);
     return dom(response.getBody('utf8'));
