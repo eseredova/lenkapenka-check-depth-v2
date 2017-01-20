@@ -44,6 +44,6 @@ function getDepth() {
 getDepth();
 
 function checkDepth (depthCount) {
-    assert((depthCount <= depth), true, 'DOM depth is bigger than expected');
+    assert((depthCount <= depth), 'DOM depth is bigger than expected');
 }
 
