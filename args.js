@@ -10,7 +10,11 @@ const argv = require('yargs')
     .argv;
 
 const depth = argv.depth;
-const url = argv.url;
+let url = argv.url;
+
+if (url.indexOf('http') !==0) {
+    url = 'http://' + url;
+}
 
 module.exports = {
     depth,
