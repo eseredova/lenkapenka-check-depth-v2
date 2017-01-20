@@ -2,8 +2,11 @@
 
 const request = require('sync-request');
 const dom = require('html-dom-parser');
-const depth = process.argv[2];
-const url = process.argv[3];
+const depth = require('./args.js').depth;
+const url = require('./args.js').url;
+
+// console.log(depth);
+// console.log(url);
 
 function getDOM(url) {
     const response = request('GET', url);
@@ -11,7 +14,7 @@ function getDOM(url) {
 }
 
 function getHTML(arr) {
-    return arr[1];
+    return arr[1]; //TODO: sometimes it works wrong, with vk.com, for example
 }
 
 function getDepth() {
