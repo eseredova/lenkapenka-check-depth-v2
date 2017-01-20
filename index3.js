@@ -16,7 +16,32 @@ function getHTML(arr) {
     return arr[1];
 }
 
+function getDepth() {
+    const DOM = getDOM(url);
+    const html = getHTML(DOM);
 
+    let depthCount = 0;
+
+    function count(current, depth) {
+        let childs = current.children;
+
+        if (childs) {
+            childs.forEach(function (elem){
+                count(elem, depth + 1);
+            });
+        }
+
+        if (depthCount < depth) {
+            depthCount = depth;
+        }
+    }
+
+    count(html, 0);
+    console.log(depthCount, depth);
+    console.log(depthCount <= depth);
+}
+
+getDepth();
 
 
 
