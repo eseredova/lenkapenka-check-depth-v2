@@ -16,8 +16,6 @@
   },
   "dependencies": {
     "html-dom-parser": "0.0.2",
-    "phantom": "^3.2.1",
-    "phantomjs-prebuilt": "^2.1.14",
     "sync-request": "^4.0.1",
     "yargs": "^6.6.0"
   }
