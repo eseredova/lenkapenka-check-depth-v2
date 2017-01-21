@@ -4,10 +4,7 @@
   "description": "Smth not clear yet",
   "bin": "./babel/bin/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-version": "babel --version",
-    "build": "babel src -d lib",
-    "start2": "babel-node --presets es2015 ./src/lcd2.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elena Seredova",
   "license": "MIT",
