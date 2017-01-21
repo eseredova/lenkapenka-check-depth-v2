@@ -3,8 +3,8 @@
 
 const request = require('sync-request');
 const dom = require('html-dom-parser');
-const depth = require('./args.js').depth;
-const url = require('./args.js').url;
+const depth = require('./args').depth;
+const url = require('./args').url;
 const assert = require('assert');
 
 function getDOM(url) {
