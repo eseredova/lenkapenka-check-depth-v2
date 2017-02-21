@@ -44,9 +44,9 @@ getDepth();
 
 function checkDepth (depthCount) {
     if (depthCount > depth) {
-        throw new Error ('DOM depth is bigger than expected');
+        throw new Error ('DOM depth is ' + depthCount + '. It is bigger than expected.');
     } else {
-        console.log('actual depth ' + depthCount);
+        console.log('Actual depth ' + depthCount);
         return 0;
     }
 }
