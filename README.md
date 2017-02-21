@@ -1,7 +1,7 @@
 # lenkapenka-check-depth-v2
 DOM-depth checker
 ```bash
-npm i lenkapenka-check-depth-v2
+$ npm i lenkapenka-check-depth-v2
 ```
 
 
