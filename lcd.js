@@ -5,7 +5,6 @@ const request = require('sync-request');
 const dom = require('html-dom-parser');
 const depth = require('./args').depth;
 const url = require('./args').url;
-const assert = require('assert');
 
 function getDOM(url) {
     const response = request('GET', url);
@@ -37,13 +36,18 @@ function getDepth() {
     }
 
     count(html, 0);
-    console.log('actual depth ' + depthCount);
+
     checkDepth(depthCount);
 }
 
 getDepth();
 
 function checkDepth (depthCount) {
-    assert((depthCount <= depth), 'DOM depth is bigger than expected');
+    if (depthCount > depth) {
+        throw new Error ('DOM depth is bigger than expected');
+    } else {
+        console.log('actual depth ' + depthCount);
+        return 0;
+    }
 }
 
